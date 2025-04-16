@@ -2,7 +2,7 @@ export interface Service {
   id: number;
   title: string;
   description: string;
-  icon: any;
+  icon: React.ReactNode;
 }
 export interface BlogPost {
   title: string;
