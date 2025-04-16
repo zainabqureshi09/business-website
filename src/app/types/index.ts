@@ -2,7 +2,7 @@ export interface Service {
   id: number;
   title: string;
   description: string;
-  icon: string;
+  icon: any;
 }
 export interface BlogPost {
   title: string;
@@ -13,13 +13,12 @@ export interface BlogPost {
 }
 
 export interface Project {
-  category: ReactI18NextChildren | Iterable<ReactI18NextChildren>;
-  category: any;
+  category: React.ReactNode;
   id: number;
   title: string;
   description: string;
   image: string;
-  details?: {
+  details: {
     overview: string;
     technologies: string[];
     link?: string;
@@ -47,6 +46,6 @@ export interface BlogPost {
     };
     alt?: string;
   };
-  content: any[];
+  content: string[];
   publishedAt: string;
 }

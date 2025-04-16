@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { projects } from '@/app/lib/projects';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 interface PortfolioDetailProps {
   params: { id: string };
@@ -58,8 +59,10 @@ export default function PortfolioDetail({ params }: PortfolioDetailProps) {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-3xl mx-auto"
         >
-          <img
+          <Image
             src={project.image}
+            width={100}
+            height={100}
             alt={project.title}
             className="w-full h-64 object-cover rounded-lg mb-8"
           />

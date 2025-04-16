@@ -3,6 +3,10 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { Merienda } from "next/font/google";
+import Link from 'next/link';
+
+const merienda = Merienda({ subsets: ["latin"], weight: "700" });
 
 interface FormData {
   name: string;
@@ -97,10 +101,11 @@ export default function Contact() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-gray-800"
+          className={`${merienda.className} text-5xl md:text-7xl text-teal-700 font-bold drop-shadow-2xl tracking-tight`}
         >
           Get in Touch
         </motion.h2>
+        <br /><br />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
@@ -114,7 +119,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-gray-700 text-sm font-semibold mb-2"
+                  className="block text-teal-700 text-sm font-semibold mb-2"
                 >
                   Name
                 </label>
@@ -132,7 +137,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-gray-700 text-sm font-semibold mb-2"
+                  className="block text-teal-700 text-sm font-semibold mb-2"
                 >
                   Email
                 </label>
@@ -150,7 +155,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="subject"
-                  className="block text-gray-700 text-sm font-semibold mb-2"
+                  className="block text-teal-700 text-sm font-semibold mb-2"
                 >
                   Subject
                 </label>
@@ -168,7 +173,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-gray-700 text-sm font-semibold mb-2"
+                  className="block text-teal-700 text-sm font-semibold mb-2"
                 >
                   Message
                 </label>
@@ -253,7 +258,7 @@ export default function Contact() {
             className="max-w-md mx-auto lg:mx-0 w-full space-y-8"
           >
             <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-teal-500">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+              <h3 className="text-2xl font-semibold text-teal-700 mb-6">
                 Contact Information
               </h3>
               <ul className="space-y-4 text-gray-600">
@@ -315,7 +320,7 @@ export default function Contact() {
                     />
                   </svg>
                   <a
-                    href="mailto:contact@techbit.com"
+                    href="mailto:zainab.cyber.dev@gmail.com"
                     className="hover:text-teal-500 transition-colors duration-300"
                   >
                     contact@techbit.com
@@ -324,12 +329,12 @@ export default function Contact() {
               </ul>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-teal-500">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+              <h3 className="text-2xl font-semibold text-teal-700 mb-6">
                 Follow Us
               </h3>
               <div className="flex justify-center lg:justify-start space-x-6">
                 {socialLinks.map((social) => (
-                  <a
+                  <Link
                     key={social.name}
                     href={social.href}
                     aria-label={`Follow us on ${social.name}`}
@@ -342,7 +347,7 @@ export default function Contact() {
                       whileHover={{ scale: 1.2 }}
                       transition={{ duration: 0.2 }}
                     />
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
