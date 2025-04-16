@@ -16,9 +16,10 @@ interface FormData {
 }
 
 const socialLinks = [
-  { name: 'Twitter', href: '#', icon: '/images/twitter-icon.svg' },
-  { name: 'LinkedIn', href: '#', icon: '/images/linkedin-icon.svg' },
-  { name: 'GitHub', href: '#', icon: '/images/github-icon.svg' },
+  { name: 'Twitter', href: '#', icon: '/icons8-twitter.svg' },
+  { name: 'LinkedIn', href: '#', icon: '/icons8-linkedin.svg' },
+  { name: 'GitHub', href: '#', icon: '/icons8-github.svg' },
+  { name: 'Instgram', href: '#', icon: '/icons8-instagram-logo.svg' },
 ];
 
 export default function Contact() {

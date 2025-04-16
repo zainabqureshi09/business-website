@@ -7,17 +7,19 @@ const footerLinks = [
   { name: 'Services', href: '/services' },
   { name: 'Portfolio', href: '/portfolio' },
   { name: 'Contact', href: '/contact' },
+ 
 ];
 
 const socialLinks = [
-  { name: 'Twitter', href: '#', icon: '/images/twitter-icon.svg' },
-  { name: 'LinkedIn', href: '#', icon: '/images/linkedin-icon.svg' },
-  { name: 'GitHub', href: '#', icon: '/images/github-icon.svg' },
+  { name: 'Twitter', href: '#', icon: '/icons8-twitter.svg' },
+  { name: 'LinkedIn', href: '#', icon: '/icons8-linkedin.svg' },
+  { name: 'GitHub', href: '#', icon: '/icons8-github.svg' },
+  { name: 'Instgram', href: '#', icon: '/icons8-instagram-logo.svg' },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-gray-800 to-gray-900 text-gray-100 py-16">
+    <footer className="bg-gradient-to-b from-teal-800 to-teal-900 text-gray-100 py-16">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -66,7 +68,7 @@ export default function Footer() {
                   <motion.img
                     src={social.icon}
                     alt={social.name}
-                    className="w-8 h-8 rounded-full bg-gray-700 p-1.5 group-hover:bg-teal-500 transition-colors duration-300"
+                    className="w-11 h-11 rounded-full bg-white p-1.5 group-hover:bg-teal-500 transition-colors duration-300"
                     whileHover={{ scale: 1.2 }}
                     transition={{ duration: 0.2 }}
                   />
@@ -82,7 +84,7 @@ export default function Footer() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-center text-gray-400 text-sm mt-12"
         >
-          © 2025 TechBit Solutions. All Rights Reserved.
+          © 2025 Zynithbyte Technologies. All Rights Reserved.
         </motion.p>
       </div>
     </footer>

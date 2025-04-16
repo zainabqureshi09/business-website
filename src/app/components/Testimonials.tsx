@@ -8,7 +8,7 @@ const merienda = Merienda({ subsets: ["latin"], weight: "700" });
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    quote: 'TechBit transformed our business with their innovative solutions!',
+    quote: 'Zynithbyte transformed our business with their innovative solutions!',
     author: 'John Doe',
     company: 'XYZ Corp',
   },
@@ -28,7 +28,7 @@ const testimonials: Testimonial[] = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-50 to-gray-100">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
