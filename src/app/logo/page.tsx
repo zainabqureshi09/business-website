@@ -1,4 +1,3 @@
-// components/ZynithbyteLogo.tsx
 
 const ZynithbyteLogo = () => {
     return (
