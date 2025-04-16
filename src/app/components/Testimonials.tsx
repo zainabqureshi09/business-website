@@ -1,6 +1,9 @@
 'use client';
 import { motion } from 'framer-motion';
 import { Testimonial } from '../types';
+import { Merienda } from 'next/font/google';
+
+const merienda = Merienda({ subsets: ["latin"], weight: "700" });
 
 const testimonials: Testimonial[] = [
   {
@@ -31,7 +34,7 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-gray-800"
+          className={`${merienda.className} text-5xl md:text-7xl text-teal-700 font-bold drop-shadow-2xl tracking-tight`}
         >
           What Our Clients Say
         </motion.h2>
